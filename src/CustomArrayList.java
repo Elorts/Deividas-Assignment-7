@@ -22,6 +22,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 		}
 	}
 
+	
 	private void doubleArraySize() {
 		arrayListSize *= 2; 
 		
