@@ -34,6 +34,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 		items = tempArray;
 	}
 
+
 	@Override
 	public int getSize() {
 		return itemIndex;
