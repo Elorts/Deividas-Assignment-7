@@ -39,6 +39,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 		return itemIndex;
 	}
 
+	
 	@Override
 	public T get(int index) {
 		return (T) items[index];
