@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class CustomArrayListTest {
 	
 	@Test
-	public void testRemoveNinthElement() {
+	public void testingOfRemovalAndAddition() {
 		
 		CustomList<Integer> sut = new CustomArrayList<>();
 		for (int i = 0; i < 10; i++) {
