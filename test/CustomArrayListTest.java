@@ -5,72 +5,38 @@ import org.junit.jupiter.api.Test;
 class CustomArrayListTest {
 	
 	@Test
-	public void testCorrectNumberOfValues() {
-
-		CustomList<Integer> sut = new CustomArrayList<>();
-		for (int i = 0; i < 10; i++) {
-			sut.add(i);
-		}
-		
-		assertEquals(9, sut.get(9));
-		
-	}
-
-	@Test
-	public void testRemoveElement() {
+	public void testRemoveNinthElement() {
 		
 		CustomList<Integer> sut = new CustomArrayList<>();
 		for (int i = 0; i < 10; i++) {
 			sut.add(i);
 		}
 		
-		Integer removedElement = sut.remove(1);
-		assertEquals(1, removedElement);
+		sut.remove(9);
+		assertEquals(null, sut.get(9));
+		
+		sut.remove(7);
+		assertEquals(8, sut.get(7));
+		
+		sut.add(1000);
+		assertEquals(1000, sut.get(8));
+		
+		sut.add(7, 1001);
+		assertEquals(1001, sut.get(7));
+		
+		sut.add(7, 1002);
+		assertEquals(1002, sut.get(7));
+		
+		sut.add(7, 89);
+		assertEquals(89, sut.get(7));
+		
+		sut.remove(7);
+		assertEquals(1002, sut.get(7));
+		
+		sut.add(2000);
+		assertEquals(2000, sut.get(11));
+		
+		sut.add(3000);
+		assertEquals(3000, sut.get(12));
 	}
-	
-	
-//	@Test
-//	void should_add_one_item_to_customArrayList() {
-//		CustomList<Integer> customList = new CustomArrayList<>();
-//		
-//		customList.add(0);
-//		customList.add(1);
-//		customList.add(2);
-//		customList.add(3);
-//		customList.add(4);
-//		customList.add(5);
-//		customList.add(6);
-//		customList.add(7);
-//		customList.add(8);
-//		customList.add(9);
-//		
-//		
-//		
-//		System.out.println("Size before instertion: " + customList.getSize());
-//		
-//		customList.remove(9);
-//				
-//		customList.add(1, 999);
-//		
-//		assertEquals(999, customList.get(1));
-//		assertEquals(11, customList.getSize());
-//		
-//		System.out.println("Size after instertion of 999 in index 1: " + customList.getSize());
-//		
-//		for(int i = 0; i < customList.getSize(); i++) {
-//			System.out.println(i + " -> " + customList.get(i));
-//		}	
-//			
-//		customList.remove(1);
-//		assertEquals(22, customList.get(1));
-//		assertEquals(10, customList.getSize());
-//		
-//		System.out.println("Size after removal of element in index 1: " + customList.getSize());
-//		
-//		for(int i = 0; i < customList.getSize(); i++) {
-//			System.out.println(i + " -> " + customList.get(i));
-//		}	
-//				
-//	}
-
 }

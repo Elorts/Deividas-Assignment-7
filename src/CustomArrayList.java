@@ -51,7 +51,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 			doubleArraySize();
 		}
 		
-		for (int i = itemIndex; i >= index; i--) {
+		for (int i = itemIndex - 1; i >= index; i--) {
 			items[i + 1] = items[i];
 		}
 		
@@ -71,6 +71,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 			}
 			
 		}
+
 		itemIndex--;
 		return null;
 	}
