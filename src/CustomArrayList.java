@@ -74,4 +74,5 @@ public class CustomArrayList<T> implements CustomList<T> {
 		itemIndex--;
 		return null;
 	}
+	
 }
